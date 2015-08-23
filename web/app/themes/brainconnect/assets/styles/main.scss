@@ -1,11 +1,11 @@
 // normalize
-@import "../vendor/normalize-scss/_normalize";
+@import "../../bower_components/normalize-scss/_normalize";
 
 // Project settings
 @import "_settings";
 
 // Vendors
-@import "../vendor/csswizardry-grids/csswizardry-grids";
+@import "../../bower_components/csswizardry-grids/csswizardry-grids";
 
 // Variables
 @import "_vars";

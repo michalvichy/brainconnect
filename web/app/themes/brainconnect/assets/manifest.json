@@ -2,7 +2,7 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/main.js"
+        "scripts/*.js"
       ],
       "main": true
     },
@@ -12,11 +12,6 @@
       ],
       "main": true
     },
-    "editor-style.css": {
-      "files": [
-        "styles/editor-style.scss"
-      ]
-    },
     "jquery.js": {
       "bower": ["jquery"]
     },
@@ -25,6 +20,6 @@
     }
   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "http://brainconnect.dev"
   }
 }

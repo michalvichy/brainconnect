@@ -9,7 +9,6 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "jquery": "~2.1.4",
-    "normalize": "~1.0.4",
     "normalize-scss": "~3.0.3",
     "csswizardry-grids": "~2.2.0"
   },
