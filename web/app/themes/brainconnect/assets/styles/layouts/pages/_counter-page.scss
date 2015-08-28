@@ -1,0 +1,14 @@
+.logo-container {
+    @include min-screen($desktop) {
+        padding: 60px;
+    }
+}
+
+.cover-box {
+    padding: 10px;
+
+    img {
+        box-shadow: 0px 0px 20px $black;
+
+    }
+}
