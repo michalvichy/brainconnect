@@ -2,5 +2,6 @@ body,
 html {
     font-family: $base-font-family;
     font-size: $base-font-size;
-    overflow: hidden;
+    font-weight: $base-font-weight;
+    overflow-x: hidden;
 }

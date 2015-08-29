@@ -12,7 +12,11 @@
     <div class="grid__item desk--one-half">
         <div class="grid grid--center">
             <div class="grid__item desk--three-fifths">
-                <h3>PREMIERA!</h3>
+                <div class="infobox">
+                    <h1 class="infobox__headline">Premiera</h1>
+                    <p class="infobox__body"></p>
+                    <div class="infobox__counter"></div>
+                </div>
             </div>
         </div>
     </div><!--
@@ -26,3 +30,7 @@
         </div>
     </div>
 </div>
+
+<footer>
+    <div class="grid grid--center"></div>
+</footer>

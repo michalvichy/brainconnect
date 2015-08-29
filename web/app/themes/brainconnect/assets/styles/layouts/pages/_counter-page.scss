@@ -1,6 +1,26 @@
 .logo-container {
+    padding: 30px 0;
     @include min-screen($desktop) {
         padding: 60px;
+    }
+}
+
+.infobox {
+    text-align: center;
+}
+
+.infobox__headline {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: $base-font-weight;
+    margin: 0;
+
+    @include min-screen($tablet) {
+        font-size: 40px;
+    }
+
+    @include min-screen($desktop) {
+        font-size: 40px;
     }
 }
 
@@ -9,6 +29,5 @@
 
     img {
         box-shadow: 0px 0px 20px $black;
-
     }
 }

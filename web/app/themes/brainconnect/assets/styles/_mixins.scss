@@ -2,18 +2,14 @@
     #MEDIA QUERIES MIXINS
 \*------------------------------------*/
 
-@mixin max-screen($res)
-{
-    @media screen and (max-width: $res)
-        {
+@mixin max-screen($res) {
+    @media screen and (max-width: $res) {
         @content;
     }
 }
 
-@mixin min-screen($res)
-{
-    @media screen and (min-width: $res)
-        {
+@mixin min-screen($res) {
+    @media screen and (min-width: $res) {
         @content;
     }
 }
