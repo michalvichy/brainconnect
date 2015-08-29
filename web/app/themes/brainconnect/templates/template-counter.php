@@ -15,7 +15,34 @@
                 <div class="infobox">
                     <h1 class="infobox__headline">Premiera</h1>
                     <p class="infobox__body"></p>
-                    <div class="infobox__counter"></div>
+                    <div class="infobox__counter js-counter">
+                        <div class="grid grid--center">
+                            <div class="grid__item one-quarter">
+                                <div class="timer">
+                                    <span id="days" class="timer-value"></span>
+                                    <div>days</div>
+                                </div>
+                            </div><!--
+                            --><div class="grid__item one-quarter">
+                                <div class="timer">
+                                    <span id="hours" class="timer-value"></span>
+                                    <div>hours</div>
+                                </div>
+                            </div><!--
+                            --><div class="grid__item one-quarter">
+                                <div class="timer">
+                                    <span id="minutes" class="timer-value"></span>
+                                    <div>minutes</div>
+                                </div>
+                            </div><!--
+                            --><div class="grid__item one-quarter">
+                                <div class="timer">
+                                    <span id="seconds" class="timer-value timer-value--last"></span>
+                                    <div>seconds</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

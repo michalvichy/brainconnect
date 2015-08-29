@@ -7,12 +7,12 @@
 
 .infobox {
     text-align: center;
+    color: $almost-black;
 }
 
 .infobox__headline {
     text-transform: uppercase;
     font-size: 30px;
-    font-weight: $base-font-weight;
     margin: 0;
 
     @include min-screen($tablet) {
@@ -20,7 +20,37 @@
     }
 
     @include min-screen($desktop) {
+        font-weight: $base-font-weight;
         font-size: 40px;
+    }
+}
+
+.infobox__counter {
+    visibility: hidden;
+}
+
+.timer {
+    text-align: center;
+}
+
+.timer-value {
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    &:after {
+        content: ':';
+        position: absolute;
+        font-size: 35px;
+        top: 5px;
+        right: -50%;
+    }
+}
+
+.timer-value--last {
+    &:after {
+        content: '';
     }
 }
 
