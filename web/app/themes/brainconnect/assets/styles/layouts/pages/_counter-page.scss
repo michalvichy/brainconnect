@@ -1,5 +1,6 @@
 .logo-container {
     padding: 30px 0;
+
     @include min-screen($desktop) {
         padding: 60px;
     }
@@ -10,6 +11,11 @@
     text-align: center;
     color: $almost-black;
     min-height: 140px;
+    margin: 30px 0;
+
+    @include min-screen($tablet) {
+        margin: 0;
+    }
 }
 
 .infobox__inner {
@@ -33,6 +39,11 @@
         font-weight: $base-font-weight;
         font-size: 40px;
     }
+
+    @include min-screen($desktop-wide) {
+        font-weight: $base-font-weight;
+        font-size: 72px;
+    }
 }
 
 .infobox__body {
@@ -41,10 +52,15 @@
     @include min-screen($desktop) {
         font-size: 23px;
     }
+
+    @include min-screen($desktop) {
+        font-size: 30px;
+    }
 }
 
 .infobox__counter {
     visibility: hidden;
+    min-height: 80px;
 }
 
 .timer {
@@ -72,6 +88,15 @@
     }
 }
 
+.timer__period {
+    font-size: 18px;
+
+    @include min-screen($desktop-wide) {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
 .cover-box {
     padding: 10px;
 
@@ -91,4 +116,10 @@
 
 .counter__footer {
     padding: 25px;
+}
+
+.footer__headline {
+    @include min-screen($desktop-wide) {
+        font-size: 20px;
+    }
 }

@@ -1,6 +1,7 @@
 <?php
     $counter_fields = CFS()->get();
     $headline = $counter_fields['bc_counter_headline'];
+    $footer_headline = $counter_fields['bc_counter_footer_headline'];
     $text = $counter_fields['bc_counter_text'];
 ?>
 
@@ -8,7 +9,7 @@
     <div class="grid__item eleven-twelfths tab--two-thirds desk--one-half">
         <div class="logo-container">
             <div class="img-box">
-                <img src="<?php echo get_template_directory_uri().'/dist/images/logo.png'; ?>" alt="">
+                <img src="<?php echo get_template_directory_uri().'/dist/images/logo2.png'; ?>" alt="">
             </div>
         </div>
     </div>
@@ -29,25 +30,25 @@
                                 <div class="grid__item one-quarter">
                                     <div class="timer">
                                         <span id="days" class="timer-value"></span>
-                                        <div>days</div>
+                                        <div class="timer__period">days</div>
                                     </div>
                                 </div><!--
                                 --><div class="grid__item one-quarter">
                                     <div class="timer">
                                         <span id="hours" class="timer-value"></span>
-                                        <div>hours</div>
+                                        <div class="timer__period">hours</div>
                                     </div>
                                 </div><!--
                                 --><div class="grid__item one-quarter">
                                     <div class="timer">
                                         <span id="minutes" class="timer-value"></span>
-                                        <div>minutes</div>
+                                        <div class="timer__period">minutes</div>
                                     </div>
                                 </div><!--
                                 --><div class="grid__item one-quarter">
                                     <div class="timer">
                                         <span id="seconds" class="timer-value timer-value--last"></span>
-                                        <div>seconds</div>
+                                        <div class="timer__period">seconds</div>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +71,7 @@
 
 <footer class="counter__footer">
     <div class="grid grid--center">
-        <p>Znajdziesz nas na:</p>
+        <p class="footer__headline"><?php echo $footer_headline; ?></p>
         <div class="grid__item one-whole tab--three-quarters desk--one-third">
             <div class="grid grid--center">
                 <?php
@@ -80,7 +81,7 @@
                         $link = $social['bc_social_link'];
                 ?><!--
                 --><div class="grid__item one-tenth">
-                    <a href="<?php echo $link; ?>" class="social__link">
+                    <a href="<?php echo $link; ?>" class="social__link" target="_blank">
                         <img src="<?php echo $icon; ?>" alt="">
                     </a>
                 </div><!--

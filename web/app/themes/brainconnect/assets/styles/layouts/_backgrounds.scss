@@ -1,7 +1,8 @@
 .background-container {
-    background-image: url('#{$img-path}/bg-counter.png');
+    background-image: url('#{$img-path}/bg-counter2.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: fixed;
     top:0;
     left:0;
