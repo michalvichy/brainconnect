@@ -4,7 +4,6 @@ window.BC.home = function($) {
     var initCountdown = function() {
         var counter = new Counter('21 Sep 2015 00:00');
         counter.countdown();
-        console.log(counter);
     };
 
     function Counter(date) {
@@ -43,7 +42,21 @@ window.BC.home = function($) {
         }, 1000);
     };
 
+    var setInfoboxHeight = function() {
+        var $infobox = $('.js-infobox');
+        var $coverbox = $('.js-coverbox');
+
+        if (window.innerWidth > 768) {
+            $infobox.height($coverbox.height());
+        }
+    };
+
     $(document).ready(function() {
         initCountdown();
+        setInfoboxHeight();
+    });
+
+    $(window).resize(function() {
+        setInfoboxHeight();
     });
 };
