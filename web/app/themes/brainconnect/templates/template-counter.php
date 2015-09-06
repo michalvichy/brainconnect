@@ -21,7 +21,9 @@
             <div class="grid__item desk--four-fifths">
                 <div class="infobox js-infobox">
                     <div class="infobox__inner">
-                        <h1 class="infobox__headline"><?php echo $headline; ?></h1>
+                        <?php if ($headline != ''): ?>
+                            <h1 class="infobox__headline"><?php echo $headline; ?></h1>
+                        <?php endif; ?>
                         <?php if($text != ''): ?>
                             <p class="infobox__body"><?php echo $text; ?></p>
                         <?php endif; ?>
@@ -59,10 +61,10 @@
         </div>
     </div><!--
     --><div class="grid__item tab--one-half">
-        <div class="grid grid--center">
+        <div class="grid">
             <div class="grid__item desk--three-fifths">
                 <div class="img-box cover-box js-coverbox">
-                    <img src="<?php echo get_template_directory_uri().'/dist/images/okladka.jpg'; ?>" alt="">
+                    <iframe width="500" height="355" src="https://www.youtube.com/embed/QZJRN7xathY" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -71,7 +73,11 @@
 
 <footer class="counter__footer">
     <div class="grid grid--center">
-        <p class="footer__headline"><?php echo $footer_headline; ?></p>
+        <?php if($footer_headline != ''): ?>
+            <p class="footer__headline">
+                <?php echo $footer_headline; ?>
+            </p>
+        <?php endif; ?>
         <div class="grid__item one-whole tab--three-quarters desk--one-third">
             <div class="grid grid--center">
                 <?php

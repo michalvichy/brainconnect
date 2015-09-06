@@ -1,6 +1,13 @@
 window.BC = window.BC || {};
 
 window.BC.home = function($) {
+    var init = function() {
+        initCountdown();
+        setInfoboxHeight();
+        iframeWidth();
+    };
+
+
     var initCountdown = function() {
         var counter = new Counter('21 Sep 2015 00:00');
         counter.countdown();
@@ -22,7 +29,7 @@ window.BC.home = function($) {
         var time = {};
         var targetDate = this.targetDate;
 
-        setInterval(function() {
+        var interval = setInterval(function() {
             var currentDate = new Date().getTime();
             var remainingTime = (targetDate - currentDate) / 1000;
             $('.js-counter').css('visibility', 'visible');
@@ -36,9 +43,14 @@ window.BC.home = function($) {
             time.minutes = parseInt(remainingTime / 60);
             time.seconds = parseInt(remainingTime % 60);
 
-            ['days', 'hours', 'minutes', 'seconds'].map(function(entry) {
-                $('#'+entry).html(addZero(time[entry]));
-            });
+            if (time.days + time.hours + time.minutes + time.seconds <= 0) {
+                clearInterval(interval);
+                $('.js-counter').hide();
+            } else {
+                ['days', 'hours', 'minutes', 'seconds'].map(function(entry) {
+                    $('#'+entry).html(addZero(time[entry]));
+                });
+            }
         }, 1000);
     };
 
@@ -51,12 +63,22 @@ window.BC.home = function($) {
         }
     };
 
+    var iframeWidth = function() {
+        var $iframe = $('.js-coverbox iframe');
+        if (window.innerWidth <= 560) {
+            $iframe.addClass('iframe--full');
+        } else {
+            $iframe.removeClass('iframe--full');
+        }
+    }
+
+
     $(document).ready(function() {
-        initCountdown();
-        setInfoboxHeight();
+        init();
     });
 
     $(window).resize(function() {
         setInfoboxHeight();
+        iframeWidth();
     });
 };
