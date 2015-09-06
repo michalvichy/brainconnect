@@ -61,11 +61,20 @@
         </div>
     </div><!--
     --><div class="grid__item tab--one-half">
-        <div class="grid">
+        <div class="grid grid--center">
             <div class="grid__item desk--three-fifths">
                 <div class="img-box cover-box js-coverbox">
-                    <iframe width="500" height="355" src="https://www.youtube.com/embed/QZJRN7xathY" frameborder="0" allowfullscreen></iframe>
+                    <a href="http://www.sonicrecords.pl/catalogs/view/think-different-1">
+                        <img src="<?php echo get_template_directory_uri().'/dist/images/okladka.jpg'; ?>" class="js-cover" alt="Cover">
+                    </a>
                 </div>
+            </div>
+        </div>
+    </div><!--
+    --><div class="grid__item one-whole">
+        <div class="grid grid--center">
+            <div class="cover-box trailer-box js-iframe">
+                <iframe width="660" height="370" src="https://www.youtube.com/embed/QZJRN7xathY" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>

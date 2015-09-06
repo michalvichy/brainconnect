@@ -56,21 +56,21 @@ window.BC.home = function($) {
 
     var setInfoboxHeight = function() {
         var $infobox = $('.js-infobox');
-        var $coverbox = $('.js-coverbox');
+        var $cover = $('.js-cover');
 
         if (window.innerWidth > 768) {
-            $infobox.height($coverbox.height());
+            $infobox.height($cover.height());
         }
     };
 
     var iframeWidth = function() {
-        var $iframe = $('.js-coverbox iframe');
+        var $iframe = $('.js-iframe iframe');
         if (window.innerWidth <= 560) {
             $iframe.addClass('iframe--full');
         } else {
             $iframe.removeClass('iframe--full');
         }
-    }
+    };
 
 
     $(document).ready(function() {
