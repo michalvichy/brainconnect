@@ -3,6 +3,9 @@
     $headline = $counter_fields['bc_counter_headline'];
     $footer_headline = $counter_fields['bc_counter_footer_headline'];
     $text = $counter_fields['bc_counter_text'];
+
+    $premiere_date = new DateTime('2015-09-21');
+    $current_date = new DateTime();
 ?>
 
 <div class="grid grid--center">
@@ -64,9 +67,12 @@
         <div class="grid grid--center">
             <div class="grid__item desk--three-fifths">
                 <div class="img-box cover-box js-coverbox">
-                    <a href="http://www.sonicrecords.pl/catalogs/view/think-different-1">
-                        <img src="<?php echo get_template_directory_uri().'/dist/images/okladka.jpg'; ?>" class="js-cover" alt="Cover">
-                    </a>
+                    <div class="ribbon">
+                        <span>
+                            <a class="preorder-link" href="http://www.sonicrecords.pl/catalogs/view/think-different-10">zamów</a>
+                        </span>
+                    </div>
+                    <img src="<?php echo get_template_directory_uri().'/dist/images/okladka.jpg'; ?>" class="js-cover" alt="Cover">
                 </div>
             </div>
         </div>
