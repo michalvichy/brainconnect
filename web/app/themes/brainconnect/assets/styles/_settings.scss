@@ -10,6 +10,7 @@ $pull: true;
  * Breakpoints
  */
 $phone: 320px;
+$phone-landscape: 560px;
 $tablet: 767px;
 $desktop: 1024px;
 $desktop-medium: 1280px;
@@ -24,18 +25,22 @@ $breakpoints: (
     'desk-wide' '(min-width: #{$desktop-wide})'
 );
 
+$breakpoint-has-widths: ('phone', 'tab', 'desk', 'desk-med', 'desk-wide');
+$breakpoint-has-push: ('phone', 'tab', 'desk', 'desk-med', 'desk-wide');
+$breakpoint-has-pull: ('phone', 'tab', 'desk', 'desk-med', 'desk-wide');
+
 
 /**
  * Fonts
  */
 
-/**
- * to set
 
 $default-sans-fonts: "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-$base-font-family: 'Lato', $default-sans-fonts;
+$base-font-family: 'Resagokr', $default-sans-fonts;
+/**
+ * to set
 $header-font-family: 'lato', $default-sans-fonts;
 */
 
-$base-font-size: 14px;
+$base-font-size: 16px;
 $base-font-weight: 400;
